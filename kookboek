@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kookboek</title>
+</head>
+<style>
+	text {
+		margin: auto auto;
+	}
+	p {
+		text-align: center;
+	}
+	button {
+	    background-color: rgba(1,200,255,1);
+	    margin: auto;
+	    border-radius: 25px;
+	    padding: 5px 25px;
+	    text-align: center;
+	}
+</style>
+<body bgcolor="yellow">
+	<text>
+		<p id="helloText">Klik alstublieft op beginnen</p>
+		<button id="clickButton">Beginnen</button>
+	</text>
+<script> 
+var myButton = document.getElementById("clickButton");
+var myText = document.getElementById("helloText");
+myButton.addEventListener('click', doSomething, true)
+function doSomething() {
+	var gerecht = prompt("Wat wilt u maken?");
+	window.alert("U wilt "+gerecht+" maken?");
+	confirm("U weet zeker dat u "+gerecht+" wilt maken?");
+		var ingrediënt1 = prompt("Wat is ingrediënt 1?")
+		var ingrediënt2 = prompt("Wat is dan ingrediënt 2")
+		var tijd = prompt("Wat is de bereidingstijd?")
+	window.alert("Het recept wordt berekent");
+	myText.textContent = "Je kunt "+gerecht+" maken met "+ingrediënt1+" en "+ingrediënt2+". Dit kost circa "+tijd+".";
+}
+</script>
+
+</body>
+</html>
